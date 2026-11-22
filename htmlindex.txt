@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taslima Tabassum Shoshy - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1a1a2e;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 5px solid #00d4ff;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #00d4ff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #bbb;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+            color: #1a1a2e;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #00d4ff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* Link Cards */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .link-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .link-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .link-card ul {
+            list-style: none;
+        }
+
+        .link-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .link-card ul li a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .link-card ul li a:hover {
+            color: #00d4ff;
+            transform: translateX(5px);
+        }
+
+        /* Contact */
+        .contact-info {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: #bbb;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Taslima Shoshy</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="profile.jpg" alt="Taslima Tabassum Shoshy">
+        <h1>Hello, I am <span>Taslima Tabassum Shoshy</span></h1>
+        <p>Digital Marketer, Web Developer, and Content Creator. I build beautiful websites and create engaging digital experiences.</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate digital creator and web developer. I specialize in digital marketing, web development, and creative writing. From building e-commerce sites to writing blogs, I love bringing ideas to life on the internet.</p>
+    </section>
+
+    <!-- Portfolio & Links Section -->
+    <section id="portfolio">
+        <h2>My Work & Profiles</h2>
+        
+        <div class="links-grid">
+            <!-- Websites -->
+            <div class="link-card">
+                <h3>🌐 Websites & Projects</h3>
+                <ul>
+                    <li><a href="https://muse.ai/s/digital-marketing-services-kw6xofxhxwcxrg2/UawUMHvGAsnTHyJ53URQqMBSlroFChXqfib0hrWv6fA" target="_blank">Twilight Digital Marketing</a></li>
+                    <li><a href="https://muse.ai/s/books-and-videos-xzt6xofxl4r5hx0/cTSHJfgyU95ZLEPBjPDA8tzYt4-0MnOD1qaXpDcHW84" target="_blank">Books and Videos</a></li>
+                    <li><a href="https://live-moonlit-ink.pantheonsite.io/" target="_blank">Moonlit Ink (WordPress)</a></li>
+                    <li><a href="https://tabassumshoshy-commits.github.io/portfolio/" target="_blank">My Portfolio</a></li>
+                    <li><a href="https://storybookishwithshoshy.blogspot.com/" target="_blank">The Story Basket (Blog)</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Profiles -->
+            <div class="link-card">
+                <h3>📱 Social Profiles</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/tabassum-shoshy-b8b8b1446/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/share/1G6coSAjvA/" target="_blank">Facebook</a></li>
+                    <li><a href="https://youtube.com/@tabassumshoshy1235" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.instagram.com/tabassum.shoshy/" target="_blank">Instagram</a></li>
+                    <li><a href="https://x.com/TabassumShoshy" target="_blank">X (Twitter)</a></li>
+                    <li><a href="https://www.threads.com/@tabassum.shoshy" target="_blank">Threads</a></li>
+                    <li><a href="https://www.pinterest.com/tabassumshoshy/" target="_blank">Pinterest</a></li>
+                    <li><a href="https://medium.com/@tabassumshoshy" target="_blank">Medium</a></li>
+                    <li><a href="https://www.reddit.com/user/SHOSHY21/" target="_blank">Reddit</a></li>
+                    <li><a href="https://github.com/tabassumshoshy-commits" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.behance.net/tabassumshoshy" target="_blank">Behance</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Twilight+Digital+Marketing+Kushtia" target="_blank">Google Business</a></li>
+                </ul>
+            </div>
+
+            <!-- Freelance Marketplaces -->
+            <div class="link-card">
+                <h3>💼 Freelance Marketplaces</h3>
+                <ul>
+                    <li><a href="https://www.fiverr.com/sellers/tabassumshoshy/" target="_blank">Fiverr</a></li>
+                    <li><a href="https://www.seoclerk.com/user/tabassumshoshy" target="_blank">SEOClerks</a></li>
+                    <li><a href="https://kwork.com/user/tabassumshoshy" target="_blank">Kwork</a></li>
+                    <li><a href="https://www.freelancer.com.bd/u/tabassumshoshy" target="_blank">Freelancer</a></li>
+                </ul>
+            </div>
+
+            <!-- Shops -->
+            <div class="link-card">
+                <h3>🛒 My Shops</h3>
+                <ul>
+                    <li><a href="https://shoshy25.gumroad.com" target="_blank">Gumroad</a></li>
+                    <li><a href="https://payhip.com/ShoshysStoryHouse" target="_blank">Payhip</a></li>
+                    <li><a href="https://www.amazon.com/dp/B0HPZWFSDB" target="_blank">Amazon - Crimson Vows</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <p>Feel free to reach out to me for collaborations, freelance work, or just to say hi!</p>
+            <p>Email: <a href="mailto:tabassumshoshy@gmail.com">tabassumshoshy@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Taslima Tabassum Shoshy | All Rights Reserved</p>
+        <p>Built with ❤️</p>
+    </footer>
+
+</body>
+</html>
