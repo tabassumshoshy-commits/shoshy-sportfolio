@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="moonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7d774"/>
+      <stop offset="100%" stop-color="#dfa83c"/>
+    </linearGradient>
+  </defs>
+  <!-- Navy disc background (matches the site nav) -->
+  <circle cx="50" cy="50" r="50" fill="#1a1a2e"/>
+  <!-- Crescent moon: gold disc with a navy bite -->
+  <circle cx="44" cy="50" r="28" fill="url(#moonGold)"/>
+  <circle cx="60" cy="40" r="24" fill="#1a1a2e"/>
+  <!-- Sparkle stars -->
+  <path d="M78 12 L80.2 19.4 L87.5 21.6 L80.2 23.8 L78 31 L75.8 23.8 L68.5 21.6 L75.8 19.4 Z" fill="#00d4ff"/>
+  <path d="M27 16 L28.3 20.4 L32.5 21.7 L28.3 23 L27 27.5 L25.7 23 L21.5 21.7 L25.7 20.4 Z" fill="#ffffff"/>
+  <path d="M82 58 L83.2 62 L87 63.2 L83.2 64.4 L82 68.5 L80.8 64.4 L77 63.2 L80.8 62 Z" fill="#f7d774"/>
+  <circle cx="24" cy="70" r="2.4" fill="#00d4ff"/>
+  <circle cx="70" cy="76" r="2" fill="#ffffff"/>
+</svg>
